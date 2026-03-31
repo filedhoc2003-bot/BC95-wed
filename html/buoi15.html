@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài học buổi 15</title>
+    <!-- link css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="p-96">
+      <section class="bg-gray-100 rounded-lg shadow-lg p-6 mt-5">
+        <form id="formHoaDon" class="space-y-4">
+          <!-- maKH -->
+          <div>
+            <label class="block font-medium mb-1">Mã khách hàng</label>
+            <input
+              type="text"
+              id="maKH"
+              class="w-full border rounded px-3 py-2"
+              placeholder="Mời bạn nhập mã khách hàng"
+              required
+            />
+            <p id="errorMaKH" class="hidden text-red-400"></p>
+          </div>
+          <!-- Loại khách hàng -->
+          <div>
+            <label class="block font-medium mb-1">Loại khách hàng</label>
+            <select id="loaiKH" class="w-full border rounded px-3 py-2">
+              <option value="">--Chọn loại khách hàng--</option>
+              <option value="nhaDan">Nhà dân</option>
+              <option value="doanhNghiep">Doanh nghiệp</option>
+            </select>
+            <p id="errorLoaiKH" class="hidden text-red-400"></p>
+          </div>
+
+          <!-- số kết nối (chỉ hiện khi chọn doanh nghiệp) -->
+          <div id="wrapKetNoi" class="hidden">
+            <label class="block font-medium mb-1">Số kết nối</label>
+            <input
+              type="number"
+              id="soKetNoi"
+              min="1"
+              class="w-full border rounded px-3 py-2"
+              placeholder="Nhập số kết nối"
+            />
+            <p id="errorSoKetNoi" class="hidden text-red-400"></p>
+          </div>
+
+          <!-- số kênh cao cấp -->
+          <div>
+            <label class="block font-medium mb-1">Số kênh cao cấp</label>
+            <input
+              type="text"
+              id="soKenhCaoCap"
+              class="w-full border rounded px-3 py-2"
+              min="0"
+              placeholder="Nhập số kênh cao cấp"
+            />
+            <p id="errorSoKenhCaoCap" class="hidden text-red-400"></p>
+          </div>
+
+          <!-- nút tính tiền hóa đơn -->
+          <button
+            type="submit"
+            class="w-full bg-blue-500 rounded-md text-white px-4 py-2 hover:bg-blue-600"
+          >
+            Tính tiền cáp
+          </button>
+        </form>
+        <p id="resultHoaDon" class="hidden mt-4 font-bold"></p>
+      </section>
+    </main>
+    <!-- script -->
+    <script src="../java/buoi15.js"></script>
+  </body>
+</html>

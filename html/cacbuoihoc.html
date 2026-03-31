@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- link css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="text-3xl font-bold text-center mb-5">tính điểm tuyển sinh</h1>
+      <section class="bg-gray-100 rounded-lg shadow-lg p-6">
+        <form id="formXetTuyen" class="space-y-4">
+          <div>
+            <label class="block">Điểm chuẩn</label>
+            <input
+              name="diemChuan"
+              type="number"
+              id="diemChuan"
+              step="0.1"
+              class="w-full rounded-sm border px-3 py-2"
+              placeholder="Mời nhập điểm chuẩn"
+            />
+            <p id="erroDiemChuan" class="hidden text-red-400"></p>
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div>
+              <label class="block font-medium mb-1">Điểm toán</label>
+              <input
+                name="diemToan"
+                type="number"
+                id="diemToan"
+                step="0.1"
+                class="w-full rounded-sm border px-3 py-2"
+                placeholder="Mời nhập điểm toán"
+              />
+              <p id="erroDiemToan" class="hidden text-red-400"></p>
+            </div>
+            <div>
+              <label class="block font-medium mb-1">Điểm lý</label>
+              <input
+                name="diemLy"
+                type="number"
+                id="diemLy"
+                step="0.1"
+                class="w-full rounded-sm border px-3 py-2"
+                placeholder="Mời nhập điểm lý"
+              />
+              <p id="erroDiemLy" class="hidden text-red-400"></p>
+            </div>
+            <div>
+              <label class="block font-medium mb-1">Điểm hóa</label>
+              <input
+                name="diemHoa"
+                type="number"
+                id="diemHoa"
+                step="0.1"
+                class="w-full rounded-sm border px-3 py-2"
+                placeholder="Mời nhập điểm hóa"
+              />
+              <p id="erroDiemHoa" class="hidden text-red-400"></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block font-medium mb-1">Khu vực</label>
+              <select
+                name="khuVuc"
+                type="number"
+                id="khuVuc"
+                step="0.1"
+                class="w-full rounded-sm border px-3 py-2"
+                placeholder="Mời nhập điểm chuẩn"
+              >
+                <option value="">mời chọn khu vực</option>
+                <option value="A">khu vực A</option>
+                <option value="B">khu vực B</option>
+                <option value="C">khu vực C</option>
+              </select>
+              <p id="erroDiemChuan" class="hidden text-red-400"></p>
+            </div>
+            <div>
+              <label class="block font-medium mb-1">Đối tượng</label>
+              <select
+                name="doiTuong"
+                type="number"
+                id="doiTuong"
+                step="0.1"
+                class="w-full rounded-sm border px-3 py-2"
+                placeholder="Mời nhập đối tượng"
+              >
+                <option value="">mời chọn khu vực</option>
+                <option value="1">khu vực 1</option>
+                <option value="2">khu vực 2</option>
+                <option value="3">khu vực 3</option>
+              </select>
+              <p id="erroDiemChuan" class="hidden text-red-400"></p>
+            </div>
+          </div>
+          <button
+            id="btn123"
+            type="submit"
+            class="bg-green-400 rounded-md px-3 py-2 mt-2"
+          >
+            Tính điểm trung bình
+          </button>
+        </form>
+      </section>
+    </main>
+    <!-- script -->
+    <!-- <script src="./buoi13.js"></script> -->
+    <script src="../java/buoi14.js"></script>
+    <!-- <script src="./giu.js"></script> -->
+  </body>
+</html>
