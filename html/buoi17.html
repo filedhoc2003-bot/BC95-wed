@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"
+      integrity="sha512-h9644v03pHqrIHThkvXhB2PJ8zf5E9IyVnrSfZg8Yj8k4RsO4zldcQc4Bi9iVLUCCsqNY0b4WXVV4UB+wbWENA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-gray-200 min-h-screen">
+    <!-- header -->
+    <header class="bg-white shadow flex justify-between items-center p-6">
+      <h1 class="text-2xl font-bold text-blue-600">Phone Store</h1>
+      <div>
+        <a
+          class="text-sm text-gray-700 underline hover:text-blue-600 mr-2"
+          href="./admin.html"
+          >Admin</a
+        >
+        <button
+          id="btnGioHang"
+          class="relative px-4 py-2 border bg-blue-400 text-white rounded"
+        >
+          Giỏ Hàng
+          <span
+            class="absolute -top-2 -right-2 bg-red-500 text-white w-5 h-5 rounded-full flex justify-center items-center"
+            >0
+          </span>
+        </button>
+      </div>
+    </header>
+    <!-- danh sách sản phẩm -->
+    <!-- ô search, filter -->
+    <main class="max-w-7xl mx-auto px-4 py-6">
+      <div class="mb-6">
+        <label for="">Tìm Kiếm Sản Phẩm</label>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Tìm kiếm sản phẩm, mô tả,loại"
+          class="px-4 py-2 w-full border rounded-md"
+        />
+      </div>
+      <!-- loading spinner để chờ call API -->
+      <p
+        id="loading"
+        class="hidden text-lg text-blue-600 flex items-center justify-center"
+      >
+        Đang Tải Sản Phẩm....
+      </p>
+      <!-- container chứa danh sách sản phẩm: dùng javascript để call api và hiển thị list data -->
+      <div
+        id="danhSachSP"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      >
+        <!-- mock layout sẵn, sau đó move vào trong javascript -->
+      </div>
+    </main>
+
+    <!-- popup chi tiết sản phẩm - default: hidden. Khi user click -> show -->
+    <div
+      id="popupChiTiet"
+      class="hidden fixed z-50 inset-0 flex justify-center items-center"
+    >
+      <!-- overlay mờ ở phía sau -->
+      <div id="overlay" class="hidden absolute inset-0 bg-black/50"></div>
+      <!-- Nội dung popup -->
+      <div class="relative">
+        <button
+          id="btnClose"
+          class="absolute top-3 right-3"
+          onclick="closePopupChiTiet()"
+        >
+          X
+        </button>
+        <div
+          id="popupContent"
+          class="bg-white rounded shadow-lg w-full max-h-[90vh] p-6"
+        >
+          <!-- dùng javascript để hiển thị chi tiết sản phẩm -->
+        </div>
+      </div>
+    </div>
+
+    <!-- popup xem giỏ hàng - default: hidden. Khi user click -> show -->
+    <div
+      id="popupGioHang"
+      class="hidden fixed z-50 inset-0 flex items-center justify-center"
+    >
+      <!-- overlay -->
+      <div id="overlayGioHang" class="absolute inset-0 bg-black/50"></div>
+      <div
+        id="popupGioHangContent"
+        class="p-6 bg-white rounded shadow-lg w-full max-h-[90vh]"
+      >
+        <!-- dùng javascript để hiển thị giỏ hàng -->
+        <h1>Giỏ Hàng</h1>
+        <h1>zxczxczxczx</h1>
+      </div>
+    </div>
+    <script src="../java/buoi17.js"></script>
+  </body>
+</html>

@@ -20,7 +20,7 @@ sinhViens.forEach((sv, index) => {
 // TH2: tính điểm trung bình cảu tất cả sinh viên
 let dtb = 0;
 sinhViens.forEach((sv) => {
-  dtb += sinhViens.diem;
+  dtb += sv.diem;
 });
 dtb = dtb / sinhViens.length;
 
@@ -123,7 +123,7 @@ console.dir(isEveryAction);
 // khi nào dùng
 // tính tổng , tích , trung bình cộng của 1 mảng số
 // tính tổng tiền các mặt hàng trong giỏ hàng (quản lý sản phẩm, quản lý đơn hàng)
-const listNumber = [1, 2, 3, 4, 5];
+const listNumber = [1, 2, 3, 4, 5, 6, 7];
 // số 0 tạo giá trị khởi tạo cho biến tổng
-const sum = listNumber.reduce((num, tong) => tong + num, 0);
+const sum = listNumber.reduce((num, tong) => tong - num, 0);
 console.log(`tổng: ${listNumber} là: ${sum}`);
